@@ -1,2 +1,5 @@
 node_modules/
 __deployme/
+bundle.css 
+bundle.js 
+discover-bundle.js 
