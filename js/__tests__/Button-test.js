@@ -10,8 +10,8 @@ import Button from "../source/components/Button";
 
 // const Button = require('../source/components/Button').default;
 
-describe('Render Button components', () => {
-  it('renders <a> vs <button>', () => {
+describe('Отображение компонентов Button', () => {
+  it('Отображает <a> и <button>', () => {
     const button = TestUtils.renderIntoDocument(
       <div>
         <Button>
@@ -31,10 +31,13 @@ describe('Render Button components', () => {
     expect(ReactDOM.findDOMNode(a).children[0].nodeName).toEqual('A');
   });
   
-  it('allows custom CSS classes', () => {
+  it('Разрешает применять пользовательские классы CSS', () => {
     const button = TestUtils.renderIntoDocument(
       <div><Button className="good bye">Hello</Button></div>
     );
+
+    console.log(ReactDOM.findDOMNode(button).outerHTML);
+
     const buttonNode = ReactDOM.findDOMNode(button).children[0];
     expect(buttonNode.getAttribute('class')).toEqual('Button good bye');
   });
