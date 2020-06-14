@@ -92,8 +92,8 @@ var Rating = /*#__PURE__*/function (_Component) {
       this.setTemp(this.state.rating);
     }
   }, {
-    key: "componentWillReceiveProps",
-    value: function componentWillReceiveProps(nextProps) {
+    key: "UNSAFE_componentWillReceiveProps",
+    value: function UNSAFE_componentWillReceiveProps(nextProps) {
       // реагирование на внешние изменения
       this.setRating(nextProps.defaultValue);
     }

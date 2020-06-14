@@ -33,7 +33,7 @@ class Rating extends Component {
         this.setTemp(this.state.rating);
     };
 
-    componentWillReceiveProps(nextProps) {
+    UNSAFE_componentWillReceiveProps(nextProps) {
         // реагирование на внешние изменения
         this.setRating(nextProps.defaultValue);
     };
